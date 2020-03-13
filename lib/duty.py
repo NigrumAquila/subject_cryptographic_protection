@@ -10,14 +10,14 @@ def repeatProcedure():
 
 		warning()
 
-def end(text = None) -> str:
+def end(text: str = None):
 	changeColor('white')
 	
 	if(text):
 		exit(text)
 	exit('Bye bye!')
 
-def fileNotExist(text = None) -> str:
+def fileNotExist(text: str = None):
 	changeColor('red')
 	print('file not exist.')
 	end(text)
