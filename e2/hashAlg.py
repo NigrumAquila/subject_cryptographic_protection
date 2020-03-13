@@ -18,6 +18,9 @@ while True:
 		choise = input('Select encoding source.\nFile or string?\nPress \"f\" or \"s\" and enter. \"e\" to exit: ').lower()
 
 		if choise == 'f':
+			if __name__ != '__main__':
+				os.chdir('e2')
+				
 			encodingFile = input("Enter filename or leave the field blank to check encoding.txt: ") or 'encoding.txt'
 			text = open(encodingFile, 'r').read().encode() if os.path.isfile(encodingFile) else fileNotExist()
 			break

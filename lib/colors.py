@@ -10,8 +10,6 @@ class colors:
 	cyan = '\033[96m'
 	white = '\033[97m'
 
-print(colors.green, end = '')
-
 def changeColor(color: str):
 	command = 'colors.%s' %color
 	print(eval(command), end = '')
@@ -34,7 +32,7 @@ def printValue(text: str = None):
 	print(text)
 	defaultColor()
 
-def printTextAndValue(text: str, value: str):
+def printTextAndValue(text: str = None, value: str = None):
 	changeColor('magenta')
 	print(text + ': ', end = '')
 	changeColor('white')
@@ -48,3 +46,5 @@ def typedText(text: str = None) -> str:
 	typedText = input()
 	defaultColor()
 	return typedText
+
+defaultColor()

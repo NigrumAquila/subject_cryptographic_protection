@@ -8,7 +8,7 @@ def repeatProcedure():
 		elif repeatAnswer == 'n':
 			end()
 
-		warning('You entered wrong character. Please, try again.')
+		warning()
 
 def end(text = None) -> str:
 	changeColor('white')
