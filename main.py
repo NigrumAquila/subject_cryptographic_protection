@@ -1,7 +1,7 @@
 from lib.colors import *
 from lib.duty import *
 
-exercises = ['countSymbols', 'hashAlg']
+exercises = ['countSymbols', 'hashAlg', 'DiffieHellman']
 
 print('Exercise list:')
 for idx, exercise in enumerate(exercises):

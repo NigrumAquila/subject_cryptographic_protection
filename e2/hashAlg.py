@@ -1,5 +1,8 @@
-import os, hashlib, zlib, sys
-sys.path.append('../')
+import __main__
+if __main__.__file__ != 'main.py':
+    exit('run main.py')
+
+import os, hashlib, zlib
 from lib.colors import *
 from lib.duty import *
 
