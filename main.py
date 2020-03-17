@@ -1,3 +1,4 @@
+import lib.encoding
 from lib.colors import *
 from lib.duty import *
 

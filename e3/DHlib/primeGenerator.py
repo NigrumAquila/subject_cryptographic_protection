@@ -1,7 +1,7 @@
 from math import sqrt
 from random import randint
 
-def is_prime(number) -> bool:
+def is_prime(number: int) -> bool:
     if (number % 2 == 0):
         return False
 

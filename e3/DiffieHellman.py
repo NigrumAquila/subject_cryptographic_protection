@@ -15,7 +15,11 @@ while True:
     printTextAndValue('Original message: ', message)
     
     encrypted_message = encrypt(key, message)
-    printTextAndValue('Encrypted message: ', encrypted_message)
+    try:
+        printTextAndValue('Encrypted message: ', encrypted_message)
+    except UnicodeError:
+        warning('\rYour encoding isn\'t UTF-8')
+        end('Please, restart it with "PYTHONIOENCODING=UTF-8 python main.py" or by IDE with utf8 encoding')
 
     decrypted_message = decrypt(key, encrypted_message)
     printTextAndValue('Decrypted message: ', decrypted_message)
