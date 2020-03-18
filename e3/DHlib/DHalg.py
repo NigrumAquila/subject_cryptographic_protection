@@ -65,6 +65,6 @@ def decrypt(key: int, text: str) -> str:
 def getFullKey() -> int:
     return keys['full_key_Alice']
 
-def printAllKeys() -> dict:
+def printAllKeys():
     for key, value in keys.items():
         printTextAndValue(key, value)
