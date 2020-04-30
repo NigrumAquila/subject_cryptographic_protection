@@ -2,15 +2,16 @@ import __main__
 if __main__.__file__ != 'main.py':
     exit('run main.py')
 
-from .DHlib.DHalg import encrypt, decrypt, getFullKey, printAllKeys
+from .DHlib.DHalg import encrypt, decrypt, getSharedSecret, printAllKeys, printParams
 from lib.colors import *
 from lib.duty import *
 
-key = getFullKey()
+key = getSharedSecret()
 printAllKeys()
 
 while True:
     
+    printParams();
     message = typedText('Enter message for RSA encryption: ')
     printTextAndValue('Original message: ', message)
     

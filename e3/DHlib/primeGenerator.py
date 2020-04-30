@@ -1,7 +1,7 @@
 from math import sqrt
 from random import randint
 
-def is_prime(number: int) -> bool:
+def isPrime(number: int) -> bool:
     if (number % 2 == 0):
         return False
 
@@ -14,9 +14,9 @@ def is_prime(number: int) -> bool:
 
     return True
 
-def prime_generator(noLess: int = 300, noMore: int = 500) -> int:
+def primeGenerator(noLess: int = 300, noMore: int = 500) -> int:
     number = randint(noLess, noMore)
     while True:
         number += 1
-        if is_prime(number):
+        if isPrime(number):
             return number
