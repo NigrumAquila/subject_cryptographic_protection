@@ -37,7 +37,7 @@ while True:
 
         keys['public_key_Alice->Carol'] = generator ** keys['private_key_Alice'] % prime
         keys['public_key_Alice_Carol->Bob'] = generator ** keys['private_key_Carol'] % prime
-        keys['shared_secret_key_Bob'] = keys['public_key_Alice_Carol->Bob'] ** keys['private_key_Bob'] % prime
+        keys['shared_secret_Bob'] = keys['public_key_Alice_Carol->Bob'] ** keys['private_key_Bob'] % prime
         
         keys['public_key_Bob->Carol'] = generator ** keys['private_key_Bob'] % prime
         keys['public_key_Bob_Carol->Alice'] = generator ** keys['private_key_Carol'] % prime
@@ -46,7 +46,7 @@ while True:
         keys['shared_secret_Carol_Alice'] = keys['public_key_Alice->Carol'] ** keys['private_key_Carol'] % prime
         keys['shared_secret_Carol_Bob'] = keys['public_key_Bob->Carol'] ** keys['private_key_Carol'] % prime
 
-        if keys['shared_secret_Alice'] != keys['shared_secret_Carol_Alice'] and keys['shared_secret_Bob'] != keys['shared_secret_Carol_Bob']:
+        if keys['shared_secret_Alice'] != keys['shared_secret_Carol_Alice'] or keys['shared_secret_Bob'] != keys['shared_secret_Carol_Bob']:
             warning('Key error!')
             end()
         
@@ -66,7 +66,7 @@ while True:
         keys['public_key_Carol_Bob->Alice'] = keys['public_key_Carol->Bob'] ** keys['private_key_Bob'] % prime
         keys['shared_secret_Alice'] = keys['public_key_Carol_Bob->Alice'] ** keys['private_key_Alice'] % prime
 
-        if keys['shared_secret_Alice'] != keys['shared_secret_Bob'] != keys['shared_secret_Carol']:
+        if keys['shared_secret_Alice'] != keys['shared_secret_Bob'] or keys['shared_secret_Alice'] != keys['shared_secret_Carol']:
             warning('Key error!')
             end()
 
